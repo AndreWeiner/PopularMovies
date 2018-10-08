@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="no_internet">No network connection available.</string>
+    <string name="no_movies">Could not retrieve movie data.</string>
+    <string name="no_favourites">You have not selected any favourite movie yet.</string>
+    <string name="release_date">Release date</string>
+    <string name="user_rating">User rating</string>
+    <string name="button_add">Add to\n favorites</string>
+    <string name="button_remove">Remove from\n favorites</string>
+    <string name="trailers">Trailers</string>
+    <string name="reviews">Reviews</string>
+    <string name="by_popularity">Popular</string>
+    <string name="by_rating">Best rated</string>
+    <string name="by_favourites">Favourites</string>
+    <string name="dummy">Dummy String</string>
+    <string name="query_popular">popular</string>
+    <string name="query_rating">top_rated</string>
+    <string name="query_favourites">favourites</string>
+</resources>

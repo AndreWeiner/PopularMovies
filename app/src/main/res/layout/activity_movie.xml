@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_out"
+    android:orientation="vertical"
+    tools:context=".MovieActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_title"
+        android:textSize="@dimen/title_font_size"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/moviePresentationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/posterView"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_poster"
+                    android:layout_weight="@integer/poster_weight"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_text_left"
+                    android:layout_weight="@integer/text_weight"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/release_date"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/releaseTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_poster"
+                        android:text="@string/user_rating"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ratingTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/add_remove_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_poster"
+                        android:background="@color/colorPrimary"
+                        android:onClick="addOrRemoveFromFavourites"
+                        android:paddingEnd="@dimen/margin_poster"
+                        android:paddingLeft="@dimen/margin_poster"
+                        android:text="@string/button_add"
+                        android:textColor="@color/planeWhite" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/synopsisTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/moviePresentationLayout"
+                android:layout_marginTop="@dimen/margin_poster" />
+
+            <View
+                android:id="@+id/first_separator"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/sep_height"
+                android:layout_below="@+id/synopsisTextView"
+                android:layout_marginBottom="@dimen/margin_poster"
+                android:layout_marginTop="@dimen/margin_poster"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/trailerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/first_separator"
+                android:text="@string/trailers"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/trailer_separator"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/sep_height"
+                android:layout_below="@+id/trailerTextView"
+                android:layout_marginBottom="@dimen/margin_poster"
+                android:layout_marginTop="@dimen/margin_poster"
+                android:background="@color/colorPrimary" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/trailerListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/trailer_separator" />
+
+            <TextView
+                android:id="@+id/reviewHeadTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/trailerListView"
+                android:text="@string/reviews"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/second_separator"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/sep_height"
+                android:layout_below="@+id/reviewHeadTextView"
+                android:layout_marginBottom="@dimen/margin_poster"
+                android:layout_marginTop="@dimen/margin_poster"
+                android:background="@color/colorPrimary" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ReviewListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second_separator" />
+
+            <ProgressBar
+                android:id="@+id/movieProgressView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

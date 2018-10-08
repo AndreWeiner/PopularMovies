@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="columnWidth">135dp</dimen>
+    <dimen name="margin_title">10dp</dimen>
+    <dimen name="margin_text_left">18dp</dimen>
+    <dimen name="margin_poster">8dp</dimen>
+    <dimen name="margin_out">8dp</dimen>
+    <dimen name="margin_review_text">4dp</dimen>
+    <dimen name="sep_height">1dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="title_font_size">24sp</dimen>
+    <integer name="padding">8</integer>
+    <integer name="w185_width">185</integer>
+    <integer name="w185_height">278</integer>
+    <integer name="poster_weight">2</integer>
+    <integer name="text_weight">3</integer>
+</resources>
